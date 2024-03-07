@@ -10,6 +10,7 @@ public class winText : MonoBehaviour
     void Start()
     {
         winTextdesplay.SetActive(false);
+        //Debug.Log("lol");
     }
 
 
