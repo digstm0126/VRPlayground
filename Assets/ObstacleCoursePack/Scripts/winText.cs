@@ -5,6 +5,7 @@ using UnityEngine;
 public class winText : MonoBehaviour
 {
     public GameObject winTextdesplay;
+    public GameObject troffy;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class winText : MonoBehaviour
         }
         if (collision.relativeVelocity.magnitude > 2)
             winTextdesplay.SetActive(true);
+            troffy.SetActive(true);
+            
 
     }
 }

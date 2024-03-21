@@ -18,6 +18,20 @@ public class kickBall : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, fwd, out hit, 10))
+        {
+            if (hit.collider.tag == "ball")
+            {
+                Debug.Log("BAAAALLL");
+                hit.rigidbody.AddForce(fwd * 100);
+
+            }
+            
+        }
+              
     }
 }
